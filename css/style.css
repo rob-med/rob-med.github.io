@@ -234,6 +234,16 @@ i.sites {
 .top-right-grid {
 	padding:0 0 0 30px;
 }
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(../images/res2.jpg) no-repeat;
+	}
+
 .top-left-grid label.color1 {
 	width: 455px;
 	height: 4px;
