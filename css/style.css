@@ -207,9 +207,11 @@ i.sites {
 	font-weight:600;
 	text-decoration:none;
 }
+
+
 .top-grid {
 	padding:6em 0;
-	background:#000000
+	background:#31708f
 }
 .top-grid h3 {
 	color:#fff;
@@ -573,6 +575,10 @@ label.span4 {
 		font-size: 1.85em;
 		margin-bottom: 0.85em;
 	}
+	
+	.top-grid a {
+		color: #44b76f;
+	}
 	.top-grid p {
 		font-size: 1.7em;
 		padding: 1em 0;
@@ -598,7 +604,7 @@ label.span4 {
 		height: 3px;
 	}
 	.top-right-grid label.color7,.top-right-grid label.color9 {
-		width: 240px;
+		width: 400px;
 		height: 3px;
 	}
 	.top-right-grid label.color8,.top-right-grid label.color10 {
