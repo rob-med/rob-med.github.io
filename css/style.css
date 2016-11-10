@@ -241,7 +241,8 @@ i.sites {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(../images/res2.jpg) no-repeat;
+	background: url('../images/pic.jpg') no-repeat;
+
 	}
 
 .top-left-grid label.color1 {
