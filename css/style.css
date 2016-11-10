@@ -236,8 +236,8 @@ i.sites {
 }
 
 .circular {
-	width: 300px;
-	height: 300px;
+	width: 70px;
+	height: 70px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
