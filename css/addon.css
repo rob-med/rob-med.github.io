@@ -1,6 +1,7 @@
 
 .clearfix {
 display: block;
+margin-bottom: 20px;
 }
 .clearfix:after {
 content: " ";
