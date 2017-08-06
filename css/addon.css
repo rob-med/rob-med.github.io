@@ -27,8 +27,7 @@ vertical-align: baseline;
 list-style: none;
 }
 .round {
-border-radius:100%;
-  display: block;
+ display: block;
 height: 25px;
 width: 26px;
 float: left;
