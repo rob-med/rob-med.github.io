@@ -28,28 +28,12 @@ list-style: none;
 .round {
 border-radius:100%;
   display: block;
-height: 48px;
-width: 49px;
+height: 25px;
+width: 26px;
 float: left;
 }
-.addon li em {
-background: url(http://d1dls1ko4h0b59.cloudfront.net/assets/campaign-legend-d95e12bce50a8e18d8bd3c96383c352f.png) no-repeat;
-display: block;
-height: 48px;
-width: 49px;
-float: left;
-}
-.addon li em.extra {
-background-position: -118px 0;
-}
-.addon li em.hot {
-background-position: -58px 0;
-}
-.addon p {
-padding: 10px 15px;
-margin: 0;
-font: 600 16px/22px "myriad-pro",Arial,"Helvetica Neue",Helvetica,sans-serif;
-}
+
+
 p {
 display: block;
 -webkit-margin-before: 1em;
@@ -61,7 +45,6 @@ display: block;
 .addon li .legend-info {
 float: left;
 margin-left: 10px;
-width: 155px;
 }
 
 .addon strong {
