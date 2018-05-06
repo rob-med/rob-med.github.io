@@ -56,7 +56,6 @@ label{
 }
 .social-icons {
 	float:right;
-	margin-top: 1.8em;
 }
 .social-icons i {
 	width:45px;
@@ -526,9 +525,7 @@ label.span4 {
 	.user img {
 		width: 80%;
 	}
-	.social-icons {
-		margin-top: 1.5em;
-	}
+
 	.about_user {	
 		padding: 1em 0;
 		margin: 3em 0;
@@ -802,9 +799,7 @@ label.span4 {
 	.header {
 		padding: 2em 0 2.5em 0;
 	}
-	.social-icons {
-		margin-top: 1.3em;
-	}
+
 	.event h4 {
 		font-size: 1.8em;
 	}
@@ -960,9 +955,6 @@ label.span4 {
 	}
 	.user img {
 		width: 65%;
-	}
-	.social-icons {
-		margin-top: 1em;
 	}
 	.about_user ul.call {
 		display: none;
@@ -1233,9 +1225,6 @@ label.span4 {
 	}
 	.user {
 		width:50%;
-	}
-	.social-icons {
-		margin-top: 0.8em;
 	}
 	.user img {
 		width: 94%;
