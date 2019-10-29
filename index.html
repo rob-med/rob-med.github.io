@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="css/addon.css" rel="stylesheet" type="text/css">
 
     <!-- Custom Theme files -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
 
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +29,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 <script>
-window.addEventListener("load", function(){
+$( document ).ready(function() {
+$('#carousel').carousel();
+console.log('yo');
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
@@ -42,8 +51,12 @@ window.cookieconsent.initialise({
       "border": "#fff"
     }
   }
-})});
+});
+});
+
 </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
 </head>
 
 <body>
@@ -54,145 +67,24 @@ window.cookieconsent.initialise({
         <div class="container">
             <div class="header-top">
                 
-                <div class="text" style="
-    width: 600px;
-    display: inline-block;
-">
-                    <p>roberto_ medico_</p>
-
-                </div>
-
-
-                <div class="social-icons">
-                <div class="text" style="display: inline;">
-                    <p>social_</p>
-
-                </div>                    <a href="https://twitter.com/rob_medico"><i class="twitter"></i></a>
+                <div class="text">
+                    <center>
+                    <p>Hi! I'm Roberto, I like ☕, 🎶, and 🖥️⌨️</p><br>
+                    <img style="border-radius:50%; max-width:200px;" src="images/pic.jpg"></img><br>
+                    <p>I live in Ghent, Belgium 🏡</p>
+                <div class="social-icons" style="margin-bottom:200px">
+                        <p>and you can reach me via: </p>     <a href="https://twitter.com/rob_medico"><i class="twitter"></i></a>
                     <a href="https://be.linkedin.com/in/robertomedico"><i class="linkedin"></i></a>
                 </div>
-            </div>
-            
-            <div class="about_user">
-                <ul class="place">
-                    <li>🏡 Ghent, Belgium</li>
-                </ul>
-                <ul class="message">
-                    <li>📧 [first name].[last name]91@gmail.com
-                    </li>
-                </ul>
-                <div class="clearfix" style="margin-bottom: 0px;"></div>
-            </div>
-            <div class="text">
-                <p style="color: black; width: 100%; text-align: center;">_about</p>
-                <ul class="addon">
 
-                    <li class="clearfix">
-                        <div class="legend-info">
-                            <strong>🎓 an Engineer and a Scholar</strong> 
-                            MSc Computer Engineer from Florence (Italy), currently a PhD student in Data Analysis and Machine Learning at <a href="http://www.ugent.be/ea/idlab/en">ID-Lab, Ghent University (Belgium)</a>. <br>
-                            Check out <a href="https://users.ugent.be/~rmedico/">my academic website</a> for more details.
-                        </div>
-
-                    </li>
-
-                    <li class="clearfix">
-                        <div class="legend-info">
-                            <strong>💻 a Developer (Apps & More)</strong> 
-                            I'm co-creator and dev of the Android app <a href="https://play.google.com/store/apps/details?id=it.giovanniferri.northen">Northern Eye Aurora Forecast</a>, and of <a href="https://greenguideghent.com/">greenguide.gent</a>.<br>
-                            You can find other personal projects scrolling a bit down (hosted on Heroku or Google App Engine).
-                        </div>
-                            
-                    </li>
-
-                    <li class="clearfix">
-                        <div class="legend-info">
-                            <strong>🎧 a Music Lover</strong>
-                            Very into music <a href="http://www.last.fm/it/user/Robi2468">listening</a>, playing and <a href="http://humanhuman.com/users/AllSparks">discovering</a>. Find below some of my Spotify playlists. Browse <a href="https://open.spotify.com/user/1166778002?si=_-_4tndtQ7iAL8YSimLYAQ">my profile</a> for more.
-                            What do I love? Check out my last.fm scrobbles since 2015 in this <a href="https://public.tableau.com/profile/rob2548#!/vizhome/Last_fmScrobbles2015-2018/Dashboard1">interactive visualization</a>.
-                        </div>
-
-                    </li>
-                    
-                    <li class="clearfix">
-                        <div class="legend-info">
-                                <strong>🥁 a Concert Goer</strong>
-                            I enjoy live music and often go to concerts. If you're curious, I <a href="https://www.setlist.fm/concerts/AllSparks">keep track</a> of them. <br> Here is <a href="https://public.tableau.com/profile/rob2548#!/vizhome/AttendedConcerts2006-now/Sheet1">an interactive visualization</a> of the concerts I attended so far, made with Tableau.
-                                                  </div>
-
-                    </li>
-
-                </ul>
-
-                <p style="color: black; width: 100%; text-align: center;">_listen</p>
-
-                <center>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <p>_weekly top 10</p>
-                            <iframe src="https://embed.spotify.com/?uri=spotify:user:1166778002:playlist:64SnlDG6rAkL2F9icep9Bg" allowtransparency="true" frameborder="0" width="300" height="80"></iframe>
-                        </div>
-                        <div class="col-sm-4">
-
-                            <p>_top songs 2018_</p>
-                            <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:37i9dQZF1Ejf7SfZTTthXy" allowtransparency="true" frameborder="0" width="300" height="80"></iframe>
-                        </div>
-                        <div class="col-sm-4">
-
-                            <p>seen live in 2018_</p>
-                            <iframe src="https://embed.spotify.com/?uri=spotify:user:1166778002:playlist:4rpBKBAYj201Ua3iFKC5vg" allowtransparency="true" frameborder="0" width="300" height="80"></iframe>
-                        </div>
-                    </div>
-
-                </center>
-
-
-
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="top-grid">
-            <div class="container">
-
-                <div class="col-md-6 top-right-grid">
-                    <h3 style="text-align:right;">💻 _personal</h3>
-                        <p class="skill6"  style="text-align:center;"><a href="https://octopusplaylists.appspot.com/">🐙 OCTOPUS Playlists</a><br><span style="font-size: 0.6em;">A Spotify-powered genre- and mood-based <br> playlist generator
-                        <br> <span class="label label-success">Java</span> <span class=" label label-default">Google App Engine</span></span></p>
-                        <p class="skill7" style="text-align:center;"><a href="https://play.google.com/store/apps/details?id=it.giovanniferri.northen">🔭 Northern Eye App</a><br><span style="font-size: 0.6em;">Android app to forecast northern lights <br> based on geo-data and user location
-                        <br> <span class="label label-success">Java</span> <span class=" label label-primary">Android SDK</span></span></p>
-
-                        <p class="skill8" style="text-align:center;"><a href="https://backup-setlistfm.herokuapp.com/">🕺 Setlist.fm Backupper</a><br><span style="font-size: 0.6em;">A tool to download users' concerts history from setlist.fm
-                        <br> <span class="label label-info">Python</span> <span class=" label label-warning">Flask</span> <span class=" color7 label label-danger">Heroku</span></span></p>
-
+                    </center>
                 </div>
-                <div class="col-md-6 top-right-grid">
-                    <h3>projects_ ☕</h3>
-                        <p class="skill8" style="text-align:center;"><a href="https://humanhuman-stats.herokuapp.com/">🎵 HumanHuman Stats</a><br><span style="font-size: 0.6em;">A tool to visualize statistics and <br>charts from users on humanhuman.com
-                        <br> <span class="label label-info">Python</span> <span class=" label label-warning">Flask</span> <span class=" color7 label label-danger">Heroku</span></span></p>
 
-                        <p class="skill9" style="text-align:center;"><a href="https://roadietour.appspot.com/trends">🚈 Roadie -- demo </a><br><span style="font-size: 0.6em;">Winner @ Music Tech Startup Weekend<br> Liege, Belgium, 2017
-                        <br> <span class="label label-info">Python</span> <span class=" label label-default">Google App Engine</span></span></p>
+     
 
-                        <p class="skill10" style="text-align:center;"><a href="https://github.com/rob-med">🖥️ GitHub</a><br><span style="font-size: 0.6em;">For all things code
-                        <br> <span class="label label-info">Python</span> <span class=" label label-success">Java</span></span></p>
-
-
-
-                </div>
-                <div class="clearfix"></div>
             </div>
-        </div>
-    </div>
-
-    <div style="font-size: 12px;">
-        <div class="container">
-            <div class="copyrights text-center">
-                <p>Copyright Roberto Medico © 2018 All rights reserved | Credits: template adapted from <a href="https://w3layouts.com">W3</a> &amp; <a href="https://icons8.com">icons</a> </p>
             </div>
-        </div>
-    </div>
-
-
+            </div>
 
 </body>
 
