@@ -65,18 +65,23 @@ label{
 	display:block;
 }
 
-.social-icons i {
-	width:45px;
-	height:45px;
-	background: url('../images/img-sprite.png') no-repeat 0px 0px;
-	display:inline-block;
-	margin-right: 8px;
+.social-icons a {
+	color: #999999;
+    display:inline-block;
+	margin-right:10px;
 }
 i.facebook {
 	background-position: 0px 0px;
 }
 i.facebook:hover {
 	background-position: 0px -45px;
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.selector:hover {
     transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -127,45 +132,7 @@ i.dribble:hover {
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-i.location {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -225px 0px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;	
-}
-i.love {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -255px 0px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;	
-}
-i.msg {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -285px 0px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;	
-}
-i.phone {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -315px 0px;
-	display: inline-block;
-	vertical-align: middle;
-}
-i.sites {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -345px 0px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;	
-}
+
 .about_user {
 	padding:1.5em 0;
 	margin:4em 0;
@@ -544,12 +511,7 @@ label.span4 {
 	.header {
 		padding: 3em 0 3.5em 0;
 	}
-	.social-icons i {
-		width: 35px;
-		height: 35px;
-		background: url('../images/img-sprite.png') no-repeat 0px 0px;
-		background-size: 300px;
-	}
+
 	i.facebook:hover {
 		background-position: 0px -35px;
 	}
@@ -900,12 +862,7 @@ label.span4 {
 	.user img {
 		width: 70%;
 	}
-	.social-icons i {
-		width: 30px;
-		height: 30px;
-		background: url('../images/img-sprite.png') no-repeat 0px 0px;
-		background-size: 260px;
-	}
+
 	.text p {
 		font-size: 1.35em;
 	}
@@ -979,27 +936,7 @@ label.span4 {
 	.about_user ul li {
 		font-size: 1em;
 	}
-	i.location {
-		width: 20px;
-		height: 20px;
-		background: url('../images/img-sprite.png') no-repeat -176px -2px;
-		margin-right: 0;
-		background-size: 300px;
-	}
-	i.love {
-		width: 20px;
-		height: 20px;
-		background: url('../images/img-sprite.png') no-repeat -199px -2px;
-		margin-right: 0px;
-		background-size: 300px;
-	}
-	i.msg {
-		width: 20px;
-		height: 20px;
-		background: url('../images/img-sprite.png') no-repeat -222px -2px;
-		margin-right: 0px;
-		background-size: 300px;
-	}
+
 	.text p {
 		font-size: 1.15em;
 	}
@@ -1226,10 +1163,7 @@ label.span4 {
 	i.love,i.msg {
 		margin-right: 4px;
 	}
-	i.phone {
-		width: 24px;
-		background: url('../images/img-sprite.png') no-repeat -320px -2px;
-	}
+
 	.user {
 		width:50%;
 	}

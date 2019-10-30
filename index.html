@@ -11,48 +11,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <title>Roberto Medico | Homepage</title>
      <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="css/addon.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom Theme files -->
-
-
-    <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <style></style>
-    <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
+  
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-<script>
-$( document ).ready(function() {
-$('#carousel').carousel();
-console.log('yo');
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#237afc"
-    },
-    "button": {
-      "background": "transparent",
-      "text": "#fff",
-      "border": "#fff"
-    }
-  }
-});
-});
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+    <script>
+                $( document ).ready(function() {
+                $(".selector").on("mouseover", function () {
+                    $('#profile').attr("src","images/"+$(this).html()+".jpg");
+                });
+
+                $(".selector").on("click", function () {
+                    $('#profile').attr("src","images/"+$(this).html()+".jpg");
+                });
+
+
+                console.log('yo');
+                window.cookieconsent.initialise({
+                  "palette": {
+                    "popup": {
+                      "background": "#237afc"
+                    },
+                    "button": {
+                      "background": "transparent",
+                      "text": "#fff",
+                      "border": "#fff"
+                    }
+                  }
+                });
+                });
 
 </script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
@@ -69,15 +64,18 @@ window.cookieconsent.initialise({
                 
                 <div class="text">
                     <center>
-                    <p>Hi! I'm Roberto, I like ☕, 🎶, and 🖥️⌨️</p><br>
-                    <img style="border-radius:50%; max-width:200px;" src="images/pic.jpg"></img><br>
-                    <p>I live in Ghent, Belgium 🏡 <br>and you can reach me via: </p>
+                    <p>Hi! I'm Roberto, <br> I like <a class="selector">coffee</a>, <a class="selector">music</a> and <a class="selector">tech</a></p><br>
+                    <img id="profile" style="border-radius:50%; max-width:200px;" src="images/coffee.jpg"></img><br><br><br>
+                    <p>I live in Ghent, Belgium 🏡 <br>you can find me here: </p><br>
                 <div class="social-icons" style="margin-bottom:200px">
-                             <a href="https://twitter.com/rob_medico"><i class="twitter"></i></a>
-                    <a href="https://be.linkedin.com/in/robertomedico"><i class="linkedin"></i></a><br><br>
-                                    <p><a href="https://www.makerwing.com/rob">stuff I made</a></p>
-                                    <p><a href="https://open.spotify.com/user/1166778002?si=DRARnS0GRsyvcrvuiUjv9A">music I like</a></p>
-                                    <p><a href="https://public.tableau.com/profile/rob2548#!/">data I crunch</a></p>
+                             <a ><i class="twitter"></i></a>
+                    <a href="https://twitter.com/rob_medico" class="fab fa-2x fa-twitter-square"></a>
+                    <a href="https://be.linkedin.com/in/robertomedico" class="fab fa-2x fa-linkedin"></a>
+                    <a href="https://wowmuchworld.tumblr.com" class="fab fa-2x fa-tumblr-square"></a>
+                    <a href="https://open.spotify.com/user/1166778002" class="fab fa-2x fa-spotify"></a>
+                    <br><br>
+                                    <p><a href="https://www.makerwing.com/rob"><i class="fas fa-laptop-code"></i> stuff I make</a></p>
+                                    <p><a href="https://public.tableau.com/profile/rob2548#!/"><i class="fas fa-chart-line"></i> data I crunch</a></p>
 
                 </div>
 
