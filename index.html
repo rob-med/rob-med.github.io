@@ -23,6 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+
     <script>
                 $( document ).ready(function() {
                 $(".selector").on("mouseover", function () {
@@ -47,7 +48,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     }
                   }
                 });
+                
+                $.get( "https://api.dashblock.io/model/v1", 
+                {
+                    api_key: "de38ff90-bdd2-11e9-a633-7dae51d02257",
+                    url: "https://www.last.fm/user/Robi2468/partial/albums?albums_date_preset=LAST_30_DAYS",
+                    model_id: "jzNt26VU"
+                }, function( data ) {
+                console.log(data.entities);
+                $('#album0txt').html(data.entities[0]['title'] + " by " + data.entities[0]['artist']);
+
+                    for(i=0;i<data.entities.length;i++){
+                        console.log(data.entities[i]['img']);
+
+                        $('#album'+i).attr('src', data.entities[i]['img']);
+
+                    }                });
+               
+
                 });
+                
+                
 
 </script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
@@ -64,20 +85,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 
                 <div class="text">
                     <center>
-                    <p>Hi! I'm Roberto, <br> I like <a class="selector">coffee</a>, <a class="selector">music</a> and <a class="selector">tech</a></p><br>
-                    <img id="profile" style="border-radius:50%; max-width:200px;" src="images/coffee.jpg"></img><br><br><br>
-                <div class="social-icons" style="margin-bottom:200px">
+                    <p>Hi! I'm Roberto <br> I like <a class="selector">coffee</a>, <a class="selector">music</a> and <a class="selector">tech</a></p><br>
+                    
+                    <img id="profile" style="border-radius:50%; max-width:200px;" src="images/coffee.jpg"></img>
+                <br>
+                <div class="social-icons" style="margin-bottom:20px">
                              <a ><i class="twitter"></i></a>
-                    <a href="https://twitter.com/rob_medico" class="fab fa-2x fa-twitter-square"></a>
-                    <a href="https://be.linkedin.com/in/robertomedico" class="fab fa-2x fa-linkedin"></a>
-                    <a href="https://wowmuchworld.tumblr.com" class="fab fa-2x fa-tumblr-square"></a>
-                    <a href="https://open.spotify.com/user/1166778002" class="fab fa-2x fa-spotify"></a>
-                    <br><br>
-                                    <p><a href="https://www.makerwing.com/rob"><i class="fas fa-laptop-code"></i> stuff I make</a></p>
-                                    <p><a href="https://public.tableau.com/profile/rob2548#!/"><i class="fas fa-chart-line"></i> data I crunch</a></p>
+                    <p> 
+                  
+                                    <a href="https://www.makerwing.com/rob"></i> stuff I make</a> /
+                                    <a href="https://public.tableau.com/profile/rob2548#!/"></i> data I crunch</a> /
+                                    <a href="https://twitter.com/rob_medico" class="fab fa-twitter-square"></a>
+                    <a href="https://be.linkedin.com/in/robertomedico" class="fab fa-linkedin"></a>
+                    <a href="https://wowmuchworld.tumblr.com" class="fab fa-tumblr-square"></a>
+                    <a href="https://open.spotify.com/user/1166778002" class="fab  fa-spotify"></a></p>
 
                 </div>
+                                    <p></i>This month, I've been listening to:</p>
 
+                <div class="row">
+                
+                    <img id="album0" style="border-radius:50%; max-width:100px;" src=""></img><p style="font-size: 1.25em; font-style: italic" id="album0txt"></p>
+
+                </div>
+                
+                <div class="row">
+                    <img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
+                    <img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
+                    <img id="album3" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
+                    <img id="album4" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
+                </div>
+
+                    (via <a href="https://www.last.fm/user/Robi2468">last.fm</a>)
                     </center>
                 </div>
 
