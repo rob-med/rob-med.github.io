@@ -1,0 +1,122 @@
+<!--
+Author: Roberto Medico
+Base Template: W3 Layout, http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roberto Medico | Portfolio</title>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/addon.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+
+    <script>
+                $( document ).ready(function() {
+               
+                  $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            $('.filter').show();
+        }
+        else
+        {
+            $(".filter").not('.'+value).hide();
+            $('.filter').filter('.'+value).show();
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active"); 
+
+                });
+                
+                
+
+</script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+
+    <!-- header-section-starts -->
+
+ <div class="container">
+ <br>
+ <br>
+        <div class="row">
+
+        <div align="center">
+            <a class="btn  btn-lg" href="index.html">Back</a>
+            <button class="btn  btn-lg filter-button" data-filter="all">All</button>
+            <button class="btn  btn-lg filter-button" data-filter="web">🌐 Web Apps</button>
+            <button class="btn  btn-lg filter-button" data-filter="android">📱 Android Apps</button>
+            <button class="btn  btn-lg filter-button" data-filter="python">🐍 Python</button>
+            <button class="btn  btn-lg filter-button" data-filter="music">🎶 Music</button>
+        </div>
+        <br/>
+        <br/>
+
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter web music python">
+                <a href="https://myscrobbles.herokuapp.com/"><img src="images/myscrobbles.png" class="img-responsive">
+            </a>            
+                </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter web">
+                <a href="https://greenguideghent.com"><img src="images/ggg.jpg" class="img-responsive">
+            </a>            
+                </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter web java music">
+               <a href="https://octopusplaylists.appspot.com/"> <img src="images/octopus.png" class="img-responsive">
+            </a>            
+
+               </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter android java">
+                <a href="https://play.google.com/store/apps/details?id=it.giovanniferri.northen"><img src="images/nea.png" class="img-responsive">
+            </a>            
+
+                </div>
+
+
+            
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter web python music">
+                <a href="https://backup-setlistfm.herokuapp.com/"><img src="images/backup.png" class="img-responsive">            </a>            
+
+            </div>
+            
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter web python music inactive">
+                <a href="https://roadietour.appspot.com/"><img src="images/roadie.png" class="img-responsive">
+            </a>            
+            </div>            
+
+        </div>
+    </div>
+            
+            
+
+</body>
+
+</html>

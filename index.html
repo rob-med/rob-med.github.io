@@ -49,19 +49,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   }
                 });
                 
-                $.get( "https://api.dashblock.io/model/v1", 
-                {
-                    api_key: "de38ff90-bdd2-11e9-a633-7dae51d02257",
-                    url: "https://www.last.fm/user/Robi2468/partial/albums?albums_date_preset=LAST_30_DAYS",
-                    model_id: "jzNt26VU"
-                }, function( data ) {
-                console.log(data.entities);
-                $('#album0txt').html(data.entities[0]['title'] + " by " + data.entities[0]['artist']);
+                $.get( "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=7", 
+                function( data ) {
+                console.log(data);
+                $('#album0txt').html(data.topalbums['album'][0]['name'] + " by " + data.topalbums['album'][0]['artist']['name']);
 
-                    for(i=0;i<data.entities.length;i++){
-                        console.log(data.entities[i]['img']);
+                    for(i=0;i<data.topalbums['album'].length;i++){
+                        console.log(data.topalbums['album'][i]['image']);
 
-                        $('#album'+i).attr('src', data.entities[i]['img']);
+                        $('#album'+i).attr('src', data.topalbums['album'][i]['image'][2]['#text']);
+                        $('#album'+i+'extra').attr('href', data.topalbums['album'][i]['url']);
+                        $('#album'+i+'extra').attr('title', data.topalbums['album'][i]['name'] + " by " + data.topalbums['album'][i]['artist']['name']);
 
                     }                });
                
@@ -85,35 +83,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 
                 <div class="text">
                     <center>
-                    <p>Hi! I'm Roberto <br> I like <a class="selector">coffee</a>, <a class="selector">music</a> and <a class="selector">tech</a></p><br>
-                    
-                    <img id="profile" style="border-radius:50%; max-width:200px;" src="images/coffee.jpg"></img>
-                <br>
-                <div class="social-icons" style="margin-bottom:20px">
-                             <a ><i class="twitter"></i></a>
+                    <div class="row">
+                      <div class="col-lg-4">
+                    <br>
+                    <br>
+                    <img id="profile" style="border-radius:50%; max-width:250px;" src="images/coffee.jpg"></img>
+                    </div>
+                                                                <div class="col-lg-6">
+                    <br>
+
+                    <p style="text-align: center;">Hi! I'm Roberto, <br> I like <a class="selector">coffee</a>, <a class="selector">music</a> and <a class="selector">tech</a>.</p>
+                    <hr style="max-width: 25%; opacity: 0.5">
+                                                              <div class="row" style="margin-bottom:20px">
                     <p> 
                   
-                                    <a href="https://www.makerwing.com/rob"></i> stuff I make</a> /
-                                    <a href="https://public.tableau.com/profile/rob2548#!/"></i> data I crunch</a> /
+                                    <a href="portfolio.html"></i> stuff I make</a> /
+                                    <a href="https://public.tableau.com/profile/rob2548#!/"></i> data I crunch</a> <br>
                                     <a href="https://twitter.com/rob_medico" class="fab fa-twitter-square"></a>
                     <a href="https://be.linkedin.com/in/robertomedico" class="fab fa-linkedin"></a>
                     <a href="https://wowmuchworld.tumblr.com" class="fab fa-tumblr-square"></a>
                     <a href="https://open.spotify.com/user/1166778002" class="fab  fa-spotify"></a></p>
 
                 </div>
-                                    <p></i>This month, I've been listening to:</p>
+                                                              </div>
 
-                <div class="row">
+                    </div>
+                <br>
                 
-                    <img id="album0" style="border-radius:50%; max-width:100px;" src=""></img><p style="font-size: 1.25em; font-style: italic" id="album0txt"></p>
+                                    <p></i>This month, I've been listening to:</p>
+                <br>
+                <div class="row">
+                
+                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a><p style="font-size: 1.25em; font-style: italic" id="album0txt"></p>
 
                 </div>
                 
                 <div class="row">
-                    <img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
-                    <img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
-                    <img id="album3" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
-                    <img id="album4" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img>
+                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album4extra"><img id="album4" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album5extra"><img id="album5" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album6extra"><img id="album6" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                 </div>
 
                     (via <a href="https://www.last.fm/user/Robi2468">last.fm</a>)
