@@ -33,7 +33,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 });
 
                 
-                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=12month&limit=7", 
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=7", 
                 function( data ) {
                 console.log(data);
                 $('#album0txt').html(data.topalbums['album'][0]['name'] + " by " + data.topalbums['album'][0]['artist']['name']);
@@ -93,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                 <br>
                 
-                                    <p></i>In 2019, I've been listening to:</p>
+                                    <p></i>This month, I've been listening to:</p>
                 <br>
                 <div class="row">
                 
