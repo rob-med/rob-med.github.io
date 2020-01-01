@@ -27,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script>
                 $( document ).ready(function() {
                 
-                $.get( "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1546300800&to=1577836799",//"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1514764800&to=1546300799", 
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1546300800&to=1577836799",//"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1514764800&to=1546300799", 
                 function( data ) {
                 console.log(data);
                 $('#album0txt').html("#1 " + data['weeklyalbumchart'].album[0]['name'] + " by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
@@ -43,7 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					
 					$.each(data['weeklyalbumchart'].album.slice(0,10), function (i, item) {
 						$.ajax({
-							url: "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&artist="+data['weeklyalbumchart'].album[i]['artist']['#text']+"&album="+data['weeklyalbumchart'].album[i]['name']+"&format=json&limit=1",
+							url: "https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&artist="+data['weeklyalbumchart'].album[i]['artist']['#text']+"&album="+data['weeklyalbumchart'].album[i]['name']+"&format=json&limit=1",
 							cache: false
 						}).done(function (dd) {
 													img = dd['album'].image[2]['#text'];
