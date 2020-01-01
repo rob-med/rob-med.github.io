@@ -27,8 +27,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script>
                 $( document ).ready(function() {
                 
-                $.get( "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1546300800&to=1577836799",//"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1514764800&to=1546300799", 
-                function( data ) {
+                $.get( "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1483228800&to=1514764799",
+				function( data ) {
                 console.log(data);
                 $('#album0txt').html("#1 " + data['weeklyalbumchart'].album[0]['name'] + " by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
 
@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 
                 
                 
-                                    <p></i>In 2019, I've been listening to:</p>
+                                    <p></i>In 2017, I've been listening to:</p>
                 <br>
                 <div class="row">
                 
