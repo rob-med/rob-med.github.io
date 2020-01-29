@@ -66,9 +66,9 @@ label{
 }
 
 .social-icons a {
-	color: #999999;
     display:inline-block;
 	margin-right:10px;
+    text-decoration: none;
 }
 i.facebook {
 	background-position: 0px 0px;
@@ -174,14 +174,9 @@ i.dribble:hover {
 }
 .text p {
 	color:#999999;
-	font-size:2.6em;
-	font-weight:300;
-	line-height:1.8em;
-}
-.text p  a {
-	color:#44b76f;
-	font-weight:600;
-	text-decoration:none;
+	font-size:1.6em;
+	font-weight:200;
+	line-height:1.4em;
 }
 
 
@@ -1187,6 +1182,7 @@ label.span4 {
     
     border-radius: 50%;
     margin-bottom: 20px;
+    padding: 15px;
     
     
 }
@@ -1195,12 +1191,13 @@ label.span4 {
 }
 .gallery_product:hover {
     
-    color: black;
+    opacity: 0.2;
     
 }
 
-    a { color: #44b76f; font-weight: 600;  }
-    .btn { background-color: transparent; border-color: #44b76f;color: #44b76f; font-weight: 600; }
+    a:hover { text-decoration: line-through;}
+    .fab:hover { text-decoration: none;}
+    .btn { background-color: transparent; color: #44b76f; font-weight: 600; }
     .btn:hover { background-color: #44b76f; border-color: #44b76f;color: black; font-weight: 600; }
     .inactive {opacity: 0.5}
     
