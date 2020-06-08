@@ -1,23 +1,25 @@
 /*--
-Author: W3layouts
+Original template Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-body{
+body, h1,h2,h3,h4,h5,h6{
 	padding:0;
 	margin:0;
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;    
-	background: black;
-    font-size: 16px;
+    font-family: "Lato Light",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;    
+	background: #dae1e7;
 }
+
+
+
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
-	color: #44b76f !important;
+	color: #00909e !important;
 
 }
 input[type="button"],input[type="submit"]{
@@ -173,7 +175,7 @@ i.dribble:hover {
 	color:#44b76f;
 }
 .text p {
-	color:#999999;
+	color:#142850;
 	font-size:1.6em;
 	font-weight:200;
 	line-height:1.4em;
@@ -444,8 +446,9 @@ label.span4 {
 .grids{
 	margin-top:4.5em;
 }
-.footer{
+footer{
 	padding:3em 0;
+    text-align: center;
 }
 .copyrights p {
 	color: #000;
@@ -1178,20 +1181,38 @@ label.span4 {
     
 }
 
+.gallery_product {
+    
+    margin-bottom: 20px;
+    text-align:center;
+}    
+
+.gallery_product .card-title {
+    
+    margin-bottom: 10px;
+    
+}
+
+
+
 .gallery_product .img-responsive {
     
     border-radius: 50%;
+    max-width: 70%;
+
     margin-bottom: 20px;
-    padding: 15px;
-    
+    padding: 10px;
+    border: #00909e 3px solid;
+    opacity: 0.5;
     
 }
 .filter-button{
-    margin:5px;
+    padding:20px;
 }
-.gallery_product:hover {
+.gallery_product .img-responsive:hover {
     
-    opacity: 0.2;
+    opacity: 1;
+    border:  #00909e 25px solid;
     
 }
 
