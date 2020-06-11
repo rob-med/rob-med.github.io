@@ -8,20 +8,13 @@ body, h1,h2,h3,h4,h5,h6{
 	padding:0;
 	margin:0;
     font-family: "Lato Light",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;    
-	background: #dae1e7;
+	background: #fbfaf9;
+    color: #564839;
 }
 
 
 
-body a{
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-	color: #00909e !important;
 
-}
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -59,120 +52,6 @@ label{
 }
 .header{
 	padding:4em 0;
-}
-.user {
-	float:left;
-}
-.user a {
-	display:block;
-}
-
-.social-icons a {
-    display:inline-block;
-	margin-right:10px;
-    text-decoration: none;
-}
-i.facebook {
-	background-position: 0px 0px;
-}
-i.facebook:hover {
-	background-position: 0px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-.selector:hover {
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-i.twitter {
-	background-position: -45px 0px;
-}
-i.twitter:hover {
-	background-position: -45px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-i.linkedin {
-	background-position: -90px 0px;
-}
-i.linkedin:hover {
-	background-position: -90px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-i.skype {
-	background-position: -135px 0px;
-}
-i.skype:hover {
-	background-position: -135px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-i.dribble {
-	background-position: -180px 0px;
-}
-i.dribble:hover {
-	background-position: -180px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-
-.about_user {
-	padding:1.5em 0;
-	margin:4em 0;
-	border-top:1px solid #E6E6E6;
-	border-bottom:1px solid #E6E6E6;
-}
-.about_user ul.place {
-	width:19%;
-	float:left;
-}
-.about_user ul.status {
-	width:14%;
-	float:left;
-}
-.about_user ul.message {
-	width:26%;
-	float:left;
-}
-.about_user ul.call {
-	width:23%;
-	float:left;
-}
-.about_user ul.sites {
-	width:18%;
-	float:left;
-}
-.about_user ul li {
-	display:inline-block;
-	color:#999999;
-	font-weight:300;
-}
-.about_user ul li a {
-	color:#999999;
-	font-weight:300;
-	text-decoration:none;
-}
-.about_user ul li a:hover {
-	color:#44b76f;
 }
 .text p {
 	color:#142850;
@@ -510,33 +389,6 @@ footer{
 		padding: 3em 0 3.5em 0;
 	}
 
-	i.facebook:hover {
-		background-position: 0px -35px;
-	}
-	i.twitter {
-		background-position: -35px 0px;
-	}
-	i.twitter:hover {
-		background-position: -35px -35px;
-	}
-	i.linkedin {
-		background-position: -70px 0px;
-	}
-	i.linkedin:hover {
-		background-position: -70px -35px;
-	}
-	i.skype {
-		background-position: -105px 0px;
-	}
-	i.skype:hover {
-		background-position: -105px -35px;
-	}
-	i.dribble {
-		background-position: -140px 0px;
-	}
-	i.dribble:hover {
-		background-position: -140px -35px;
-	}
 	.top-grid h3 {
 		font-size: 1.85em;
 		margin-bottom: 0.85em;
@@ -864,52 +716,6 @@ footer{
 	.text p {
 		font-size: 1.35em;
 	}
-	i.facebook {
-		background-position: 0px 0px;
-	}
-	i.facebook:hover {
-		background-position: 0px -30px;
-	}
-	i.twitter {
-		background-position: -30px 0px;
-	}
-	i.twitter:hover {
-		background-position: -30px -30px;
-	}
-	i.linkedin {
-		background-position: -60px 0px;
-	}
-	i.linkedin:hover {
-		background-position: -60px -30px;
-	}
-	i.skype {
-		background-position: -90px 0px;
-	}
-	i.skype:hover {
-		background-position: -90px -30px;
-	}
-	i.dribble {
-		background-position: -120px 0px;
-	}
-	i.dribble:hover {
-		background-position: -120px -30px;
-	}
-	.about_user ul.status {
-		display: none;
-	}
-	.about_user ul.place {
-		width: 30%;
-	}
-	.about_user ul.message {
-		width: 40%;
-	}
-	.about_user ul.call {
-		width: 30%;
-	}
-	.about_user {
-		padding: 0.6em 0;
-		margin: 1.5em 0;
-	}
 }
 @media screen and (max-width: 480px) {
 	.social-icons i {
@@ -1202,7 +1008,7 @@ footer{
 
     margin-bottom: 20px;
     padding: 10px;
-    border: #00909e 3px solid;
+    border: #74614e 3px solid;
     opacity: 0.5;
     
 }
@@ -1212,13 +1018,32 @@ footer{
 .gallery_product .img-responsive:hover {
     
     opacity: 1;
-    border:  #00909e 25px solid;
+    border:  #74614e 25px solid;
     
 }
-
-    a:hover { text-decoration: line-through;}
+    a {
+ font-weight:700;
+ color:#564839;
+ text-decoration:none;
+ position:relative;
+ white-space:nowrap
+}
+    a { outline: 0;}
+    a:after {
+ content:"";
+ width:100%;
+ height:4px;
+ left:0;
+ position:absolute;
+ bottom:-2px;
+ z-index:-1;
+ transition:.2s;
+ opacity:0;
+ background:#74614e
+}
+a:hover:after {
+ opacity:1
+}
     .fab:hover { text-decoration: none;}
-    .btn { background-color: transparent; color: #44b76f; font-weight: 600; }
-    .btn:hover { background-color: #44b76f; border-color: #44b76f;color: black; font-weight: 600; }
     .inactive {opacity: 0.5}
     
