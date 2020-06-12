@@ -31,26 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 $(".selector").on("click", function () {
                     $('#profile').attr("src","images/"+$(this).html()+"1.png");
                 });
-
-                
-                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=7", 
-                function( data ) {
-                console.log(data);
-                $('#album0txt').html("#1. " + data.topalbums['album'][0]['name'] + " by " + data.topalbums['album'][0]['artist']['name']);
-
-                    for(i=0;i<data.topalbums['album'].length;i++){
-                        console.log(data.topalbums['album'][i]['image']);
-
-                        $('#album'+i).attr('src', data.topalbums['album'][i]['image'][2]['#text']);
-                        $('#album'+i+'extra').attr('href', data.topalbums['album'][i]['url']);
-                        $('#album'+i+'extra').attr('title', data.topalbums['album'][i]['name'] + " by " + data.topalbums['album'][i]['artist']['name']);
-
-                    }                });
-               
-
                 });
-                
-                
 
 </script>
 
@@ -69,7 +50,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     I have a MSc in Computer Engineering (2016).
     <br><br>💻 Have a look at my: 
                                     <a href="portfolio.html"></i> portfolio</a> /
-                                    <a href="https://public.tableau.com/profile/rob2548#!/"></i> visualizations</a>. <br> 
+                                    <a href="https://public.tableau.com/profile/rob2548#!/"></i> visualizations</a>. <br>
+                                    🎧 Here is <a href="music.html">what I'm listening to</a>.<br> <br> 
                                      ‎For more, find me on <br>
                                     <p style="text-align: center; font-size: 32px;">
                                     <a href="https://twitter.com/rob_medico" class="fab fa-twitter-square"></a>
@@ -85,41 +67,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <center><img class="illustration" id="profile"  src="images/coffee1.png"></img></center>
 
     </div>
-    <div class="w-100">                                        <h1 style="text-align: center; padding:20px;">📻 This month, I've been listening to:</h1>
-</div>
-    <div class="col">
-                        <center><img class="illustration" id="profile2" src="images/shiny-happy-people.png"></img></center>
-
-    </div>
-
-    <div class="col">
-    
-    <center>                  
-                
-                <br>
-                    <p>
-                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
-                    <p style="font-size: 18px; font-style: italic" id="album0txt"></p>
-                <br>
-
-                
-                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a>
-                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a>
-                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a><br>
-                    <a id="album4extra"><img id="album4" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a>
-                    <a id="album5extra"><img id="album5" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a>
-                    <a id="album6extra"><img id="album6" style="border-radius:50%; max-width:70px; margin:10px;" src=""></img></a></p>
-                  
-                    <a href="2017.html">top 10 2017	|</a>
-                    <a href="2018.html">top 10 2018	|</a>
-                    <a href="2019.html">top 10 2019</a>
-
-                    
-    </center>
-    </div>
+   
   </div>
+              <footer>Copyright 2020 Roberto Medico. Illustrations from <a href="https://blush.design">blush</a>.</footer>
+
 </main>
-            <footer>Copyright 2020 Roberto Medico. Illustrations from <a href="https://blush.design">blush</a>.</footer>
 
 </body>
 

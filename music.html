@@ -1,0 +1,95 @@
+ <!--
+Author: Roberto Medico
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roberto Medico | Music</title>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/addon.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    
+        <script>
+                $( document ).ready(function() {
+              
+                
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=7", 
+                function( data ) {
+                console.log(data);
+                $('#album0txt').html("#1. " + data.topalbums['album'][0]['name'] + " by " + data.topalbums['album'][0]['artist']['name']);
+
+                    for(i=0;i<data.topalbums['album'].length;i++){
+                        console.log(data.topalbums['album'][i]['image']);
+
+                        $('#album'+i).attr('src', data.topalbums['album'][i]['image'][2]['#text']);
+                        $('#album'+i+'extra').attr('href', data.topalbums['album'][i]['url']);
+                        $('#album'+i+'extra').attr('title', data.topalbums['album'][i]['name'] + " by " + data.topalbums['album'][i]['artist']['name']);
+
+                    }                });
+               
+
+                });
+                
+                
+
+</script>
+
+</head>
+
+<body>
+
+    <!-- header-section-starts -->
+    <main>
+ <div class="container-sm" >
+ 
+                                        <h1 style="text-align: center; padding:20px;">📻 This month, I've been listening to</h1>
+                                        
+    <div class="row justify-content-center align-items-center">
+    <div class="col">
+                        <center><img class="illustration" id="profile2" src="images/shiny-happy-people.png"></img></center>
+
+    </div>
+    <div class="col">
+    <center>                  
+                
+                <br>
+                    <p>
+                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album0txt"></p>
+                <br>
+
+                
+                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a><br>
+                    <a id="album4extra"><img id="album4" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album5extra"><img id="album5" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album6extra"><img id="album6" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a></p>
+                    <p>
+                    <a href="2017.html">top 10 2017	|</a>
+                    <a href="2018.html">top 10 2018	|</a>
+                    <a href="2019.html">top 10 2019</a></p>
+
+                    
+    </center>
+    </div>
+    </div>
+                <footer>Copyright 2020 Roberto Medico. Illustrations from <a href="https://blush.design">blush</a>.</footer>
+                    </div>
+
+</main>
+</body>
+</html>

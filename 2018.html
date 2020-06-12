@@ -20,15 +20,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
 
     <script>
                 $( document ).ready(function() {
                 
                 $.get( "https://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1514764800&to=1546300799", 
-                function( data ) {
+				function( data ) {
                 console.log(data);
                 $('#album0txt').html("#1 " + data['weeklyalbumchart'].album[0]['name'] + " by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
 
@@ -74,24 +74,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 
     <!-- header-section-starts -->
+    <main>
+ <div class="container-sm" >
+                
+                                                        <h1 style="text-align: center; padding:20px;">📻 In 2018, my top albums were:</h1>
 
-    <div class="header" id="home">
-        <div class="container">
-            <div class="header-top">
-			                <div class="text">
-                    <center>
                 
+    <div class="row justify-content-center align-items-center">
                 
-                
-                                    <p></i>In 2018, my top albums were:</p>
+    <div class="col">
+    <center>                 
+                                <br>
+                    <p>
+                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album0txt"></p>
                 <br>
-                <div class="row">
                 
-                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a><p style="font-size: 1.25em; font-style: italic" id="album0txt"></p>
-
-                </div>
-                
-                <div class="row">
                     <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
@@ -101,8 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <a id="album7extra"><img id="album7" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album8extra"><img id="album8" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album9extra"><img id="album9" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
-                </div>
-
+                    <br>
                     (via <a href="https://www.last.fm/user/Robi2468">last.fm</a>)
                     </center>
                 </div>
@@ -111,9 +108,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             </div>
             </div>
-            </div>
             
 
+</main>
 </body>
 
 </html>
