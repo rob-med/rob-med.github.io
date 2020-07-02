@@ -26,10 +26,10 @@ Author: Roberto Medico
                 $( document ).ready(function() {
               
                 
-                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=7", 
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=9", 
                 function( data ) {
                 console.log(data);
-                $('#album0txt').html("#1. " + data.topalbums['album'][0]['name'] + " by " + data.topalbums['album'][0]['artist']['name']);
+                $('#album0txt').html("#1. '" + data.topalbums['album'][0]['name'] + "' by " + data.topalbums['album'][0]['artist']['name']);
 
                     for(i=0;i<data.topalbums['album'].length;i++){
                         console.log(data.topalbums['album'][i]['image']);
@@ -74,14 +74,16 @@ Author: Roberto Medico
                 
                     <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
                     <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
-                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a><br>
+                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
                     <a id="album4extra"><img id="album4" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
                     <a id="album5extra"><img id="album5" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
-                    <a id="album6extra"><img id="album6" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a></p>
-                    <p>
-                    <a href="2017.html">top 10 2017	|</a>
-                    <a href="2018.html">top 10 2018	|</a>
-                    <a href="2019.html">top 10 2019</a></p>
+                    <a id="album6extra"><img id="album6" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album7extra"><img id="album7" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a>
+                    <a id="album8extra"><img id="album8" style="border-radius:50%; max-width:90px; margin:10px;" src=""></img></a></p>
+                    <p>Top 10 albums:
+                    <a href="2017.html">2017</a>	|
+                    <a href="2018.html">2018</a>	|
+                    <a href="2019.html">2019</a></p><p style="font-size: 10px;">(via <a href="https://www.last.fm/user/Robi2468">last.fm</a>)</p>
 
                     
     </center>
