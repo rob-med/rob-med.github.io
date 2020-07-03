@@ -1,0 +1,116 @@
+<!--
+Author: Roberto Medico
+Base Template: W3 Layout, http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roberto Medico | Portfolio</title>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/addon.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+
+    <script>
+                $( document ).ready(function() {
+                
+                $.get( "https://run.mocky.io/v3/97a53ac4-2e40-47ed-81e3-3bb361d9c298", function( data ) {
+                        for(i=0;i<data.length;i=i+1){
+                        
+                            link = data[i]['link'];
+                            title = `SBR-${data[i]['release']}: ${data[i]['artist']} - ${data[i]['title']}`;
+                            msg = data[i]['msg'];
+                            
+                            $('.row').append('<card class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-4 filter web music python" data-title="'+title+'" data-msg="'+msg+'"> <center> <a href="'+link+'" target="_blank"><img src="images/sacred.png" class="img-responsive"></a><h3 class="card-title">'+title+'</h3>  <h4 class="card-subtitle text-muted">'+msg+'<br></h4>                </center></card>');
+                            
+                            
+                        }
+                      
+                      
+                    });
+               
+                  $(".filter-button").change(function(value){
+         value = $(this).val().toLowerCase();
+        $('.gallery_product').each(function(el) {
+        
+        
+
+            check_title = $(this).attr('data-title').toLowerCase().includes(value);
+            check_msg = $(this).attr('data-msg').toLowerCase().includes(value);
+            
+            if( !(check_title | check_msg)){
+                $(this).hide();
+            }
+            else{
+                        $(this).show();
+
+            }
+            
+            
+        
+        });
+        
+      
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active"); 
+
+                });
+                
+                
+
+</script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body >
+
+    <!-- header-section-starts -->
+<center>
+ <div class="container-sm">
+ <br>
+ <br>
+         <div align="center">
+         <h1><b>Sacred Bones Records Catalogue</b></h1>
+         <hr>
+         <h2>Release-by-release commentary by <a href="https://twitter.com/bradscottsand">Brad Sanders</a>. Click on a release to visit the official website.<br>
+Source(s): <a href="https://twitter.com/SacredBones/status/1244713055180726273">Twitter Thread</a>, <a href="https://www.sacredbonesrecords.com/">Sacred Bones</a></h2>
+            <input class="filter-button" data-filter="all" type="text" placeholder="Search artist, title, keywords.."></input>
+
+        </div>
+        <br/>
+        <br/>
+
+        <div class="row" >
+
+          
+                
+
+        
+
+                    </div>        </div>
+
+
+          </center>  
+
+          <footer>by <a href="http://robertomedico.tech">@rob_medico</a></footer>
+</body>
+
+</html>
