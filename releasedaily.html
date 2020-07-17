@@ -54,6 +54,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             }
                             
                                                 $('#loader').hide();
+                                                $('#free-search').val('');
+                                                
 
                           
                           
@@ -377,9 +379,10 @@ $(this).addClass("active");
             <option value="ZA">South Africa</option>
             <option value="ZM">Zambia</option>
             <option value="ZW">Zimbabwe</option></select><br>
-         🔎 Filter: <a class="genre-selector">indie</a> <a class="genre-selector">pop</a> <a class="genre-selector">rock</a>
+
+         🔎 <input id="free-search" style="margin:10px" data-filter="all" type="text" placeholder="Search by keyword, genre..."></input><br>
+                   or try: <a class="genre-selector">indie</a> <a class="genre-selector">pop</a> <a class="genre-selector">rock</a>
          <a class="genre-selector">rap</a> <br>
-         ✍️ Or <input id="free-search" style="margin:15px" data-filter="all" type="text" placeholder="Search by keyword, genre.."></input>
 
 
         </div>
