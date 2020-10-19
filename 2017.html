@@ -30,7 +30,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 $.get( "https://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1483228800&to=1514764799",
 				function( data ) {
                 console.log(data);
-                $('#album0txt').html("#1 " + data['weeklyalbumchart'].album[0]['name'] + " by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
+                $('#album0txt').html("#1. '" + data['weeklyalbumchart'].album[0]['name'] + "' by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
+                $('#album1txt').html("#2. '" + data['weeklyalbumchart'].album[1]['name'] + "' by " + data['weeklyalbumchart'].album[1]['artist']['#text']);
+                $('#album2txt').html("#3. '" + data['weeklyalbumchart'].album[2]['name'] + "' by " + data['weeklyalbumchart'].album[2]['artist']['#text']);
 
                     for(i=0;i<10;i++){
 						
@@ -81,17 +83,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 
     <div class="row justify-content-center align-items-center">
-                
+            <div class="col">
+        
+    <center>                 
+                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album0txt">  </p>                    </center>              
+</div>  
     <div class="col">
     <center>                 
-                                <br>
-                    <p>
-                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
-                    <p style="font-size: 18px; font-style: italic" id="album0txt"></p>
-                <br>
+                    
+                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album1txt">  </p>                        </center>              
+</div>  
+                        <div class="col">
+    <center>                 
+
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album2txt"></p>                    </center>
+</div>                
+</div>                
+                    <div class="row justify-content-center align-items-center">
                 
-                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
-                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+    <center>                 
+
+                
+                    <!--<a id="album1extra"><img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>-->
                     <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album4extra"><img id="album4" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
                     <a id="album5extra"><img id="album5" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
