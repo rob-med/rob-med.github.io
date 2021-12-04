@@ -26,17 +26,17 @@ Author: Roberto Medico
                 $( document ).ready(function() {
               
                 
-                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=9", 
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=Robi2468&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&period=1month&limit=9", 
                 function( data ) {
                 console.log(data);
-                $('#album0txt').html("#1. '" + data.topalbums['album'][0]['name'] + "' by " + data.topalbums['album'][0]['artist']['name']);
+                $('#album0txt').html("#1. '" + data.topartists['artist'][0]['name']);
 
-                    for(i=0;i<data.topalbums['album'].length;i++){
-                        console.log(data.topalbums['album'][i]['image']);
+                    for(i=0;i<data.topartists['artist'].length;i++){
+                        console.log(data.topartists['artist'][i]['image']);
 
-                        $('#album'+i).attr('src', data.topalbums['album'][i]['image'][2]['#text']);
-                        $('#album'+i+'extra').attr('href', data.topalbums['album'][i]['url']);
-                        $('#album'+i+'extra').attr('title', data.topalbums['album'][i]['name'] + " by " + data.topalbums['album'][i]['artist']['name']);
+                        $('#album'+i).attr('src', data.topartists['artist'][i]['image'][2]['#text']);
+                        $('#album'+i+'extra').attr('href', data.topartists['artist'][i]['url']);
+                        $('#album'+i+'extra').attr('title', data.topartists['artist'][i]['name']);
 
                     }                });
                
