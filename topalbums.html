@@ -1,0 +1,152 @@
+<!--
+Author: Roberto Medico
+Base Template: W3 Layout, http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Top Albums</title>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/addon.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+
+    <script>
+                $( document ).ready(function() {
+                
+                
+                    
+                function makeAjax(market){
+                                    $('#loader').show();
+
+                    $.getJSON({url:"css/top_albums_2021.json", 
+
+                            success: function( data ) {
+                            console.log(data);
+                            for(var i=0;i<data.length;i=i+1){
+                            
+                            
+                                link = data[i]['url'];
+                                title = data[i]['title'] +  " - " + data[i]['artist'];
+                                date = data[i]['perc'];
+                                msg = data[i]['genres'];
+                                img = data[i]['img'];
+                                
+                                $('.row').append('<card class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-4 filter web music python" data-title="'+title+
+								'" data-msg="'+msg+'"> <center> <a href="'+link+'"><img src="'+img+
+								'" class="img-responsive" style="object-fit: cover;min-height: 150px;min-width: 150px;opacity:1;border:0;"></a><h3 class="card-title">'+(i+1)+'. '+
+								title+'</h3><h4 class="card-subtitle">'+date+'% of global playcount</h4><h4 class="card-subtitle text-muted"><br>'+msg+'<br></h4></center></card>');
+                                
+                                
+                            }
+                            
+                                                $('#loader').hide();
+                                                $('#free-search').val('');
+                                                
+
+                          
+                          
+                        }});
+                        }
+               
+                  makeAjax('GB');
+                  
+                  $(".genre-selector").click(function(event) {
+                    console.log($(this).text());
+                    $("#free-search").val($(this).text());
+                    $("#free-search").change();
+                    
+                  });
+                  
+                  $("#country-selector").change(function(value){
+                    $('.row').empty();
+                    
+                        makeAjax($(this).val());
+                  });
+                  
+                  $("#free-search").change(function(value){
+         value = $(this).val().toLowerCase();
+        $('.gallery_product').each(function(el) {
+        
+        
+
+            check_title = $(this).attr('data-title').toLowerCase().includes(value);
+            check_msg = $(this).attr('data-msg').toLowerCase().includes(value);
+            
+            if( !(check_title | check_msg)){
+                $(this).hide();
+            }
+            else{
+                        $(this).show();
+
+            }
+            
+            
+        
+        });
+        
+      
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active"); 
+
+                });
+                
+                
+
+</script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+    .genre-selector { background: #564839;color: white !important;padding: 4px;margin: 2px; border-radius: 10%;}
+    </style>
+    
+
+</head>
+
+<body >
+
+    <!-- header-section-starts -->
+<center>
+ <div class="container-sm">
+ <br>
+ <br>
+         <div align="center">
+         <h1><b>Top Albums</b></h1>
+         <h2>Searchable archive of my top albums. Data & tags from <a href="https://last.fm">last.fm</a>.<br>
+         Click on a cover to open the album on last.fm.<br>
+
+         🔎 <input id="free-search" style="margin:10px" data-filter="all" type="text" placeholder="Search by keyword, genre..."></input><br>
+                   or try: <a class="genre-selector">indie</a> <a class="genre-selector">pop</a> <a class="genre-selector">rock</a>
+         <a class="genre-selector">rap</a> <br>
+
+
+        </div>
+        <br/>
+        <br/>
+
+        <div class="row" ></div>
+<img id="loader" src="images/loading.gif" />        </div>
+
+
+          </center>  
+
+          <footer>powered by <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>, made with 🤟 by <a href="http://robertomedico.tech">@rob_medico</a></footer>
+</body>
+
+</html>
