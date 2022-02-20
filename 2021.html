@@ -1,0 +1,151 @@
+<!--
+Author: Roberto Medico
+Base Template: W3 Layout, http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roberto Medico | Top Albums 2020</title>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/addon.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/ba9fa4ff4b.js" crossorigin="anonymous"></script>
+
+    <script>
+                $( document ).ready(function() {
+                
+                $.get( "https://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=25&from=1609459200&to=1640995199",//"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&format=json&user=Robi2468&limit=10&from=1514764800&to=1546300799", 
+				function( data ) {
+                console.log(data);
+                $('#album0txt').html("#1. '" + data['weeklyalbumchart'].album[0]['name'] + "' by " + data['weeklyalbumchart'].album[0]['artist']['#text']);
+                $('#album1txt').html("#2. '" + data['weeklyalbumchart'].album[1]['name'] + "' by " + data['weeklyalbumchart'].album[1]['artist']['#text']);
+                $('#album2txt').html("#3. '" + data['weeklyalbumchart'].album[2]['name'] + "' by " + data['weeklyalbumchart'].album[2]['artist']['#text']);
+                $('#album3txt').html("#4. '" + data['weeklyalbumchart'].album[3]['name'] + "' by " + data['weeklyalbumchart'].album[3]['artist']['#text']);
+
+                    for(i=0;i<20;i++){
+						
+
+                        $('#album'+i+'extra').attr('href', data['weeklyalbumchart'].album[i]['url']);
+                        $('#album'+i+'extra').attr('title', data['weeklyalbumchart'].album[i]['name'] + " by " + data['weeklyalbumchart'].album[i]['artist']['#text']);
+						
+
+                    }                
+					
+					$.each(data['weeklyalbumchart'].album.slice(0,20), function (i, item) {
+						$.ajax({
+							url: "https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=6ec7cb1e4b1b5e3d6fc9afecd920663b&artist="+data['weeklyalbumchart'].album[i]['artist']['#text']+"&album="+data['weeklyalbumchart'].album[i]['name']+"&format=json&limit=1",
+							cache: false
+						}).done(function (dd) {
+													img = dd['album'].image[2]['#text'];
+																				console.log(img);
+																				
+
+														$('#album'+i).attr('src',img);
+
+
+						});
+					});
+               
+					
+					});
+					
+
+			   
+
+                });
+				
+				
+                
+                
+
+</script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+
+    <!-- header-section-starts -->
+    <main>
+ <div class="container-sm" >
+                
+                                                        <h1 style="text-align: center; padding:20px;">📻 In 2021, my top albums were:</h1><br>
+
+                
+    <div class="row justify-content-center align-items-center">
+            <div class="col">
+        
+    <center>                 
+                    <a id="album0extra"><img id="album0" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album0txt">  </p>                    </center>              
+</div>  
+    <div class="col">
+    <center>                 
+                    
+                    <a id="album1extra"><img id="album1" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album1txt">  </p>                        </center>              
+</div>  
+                        <div class="col">
+    <center>                 
+
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album2txt"></p>                    </center>
+</div>      <div class="col">
+    <center>                 
+
+                    <a id="album3extra"><img id="album3" style="border-radius:50%; max-width:100px;" src=""></img></a>
+                    <p style="font-size: 18px; font-style: italic" id="album3txt"></p>                    </center>
+</div>                
+</div>                
+                    <div class="row justify-content-center align-items-center">
+                
+    <center>                 
+
+                
+                    <!--<a id="album1extra"><img id="album1" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a id="album2extra"><img id="album2" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>-->
+					
+                    <a class="col-md-3" id="album4extra"><img id="album4" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album5extra"><img id="album5" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album6extra"><img id="album6" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album7extra"><img id="album7" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album8extra"><img id="album8" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album9extra"><img id="album9" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album10extra"><img id="album10" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album11extra"><img id="album11" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album12extra"><img id="album12" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album13extra"><img id="album13" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album14extra"><img id="album14" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album15extra"><img id="album15" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album16extra"><img id="album16" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album17extra"><img id="album17" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album18extra"><img id="album18" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <a class="col-md-3" id="album19extra"><img id="album19" style="border-radius:50%; max-width:80px; margin:10px;" src=""></img></a>
+                    <br>
+                    (via <a href="https://www.last.fm/user/Robi2468">last.fm</a>)
+                    </center>
+                </div>
+
+     
+
+            </div>
+            </div>
+            
+
+</main>
+</body>
+
+</html>
